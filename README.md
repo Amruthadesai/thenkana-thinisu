@@ -27,3 +27,4 @@ Update the WhatsApp / phone number (`919164644415`) in `index.html` if it change
 ## Deploy
 
 Static site — host on GitHub Pages (serve from the repo root).
+Deployment test
