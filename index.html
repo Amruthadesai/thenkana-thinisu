@@ -3,42 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ತೆಂಕಣ ತಿನಿಸು | Thenkana Thinisu</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Noto+Serif+Kannada:wght@400;700&display=swap" rel="stylesheet">
+<title>ತೆಂಕಣ ತಿನಿಸು | Thenkana Thinisu — Authentic Homemade South Indian Snacks</title>
+<meta name="description" content="Thenkana Thinisu — traditional homemade South Indian snacks from Coastal Karnataka. Kajjaya, Nippattu, Kodubale, Chakli, Murukku and more. Order fresh on WhatsApp.">
+<meta name="theme-color" content="#7b1e24">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Thenkana Thinisu — Authentic Homemade South Indian Snacks">
+<meta property="og:description" content="Traditional flavours from the heart of Coastal Karnataka. Order fresh, handmade snacks on WhatsApp.">
+<meta property="og:image" content="images/snacks/hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Serif+Kannada:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="garland">🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼 🌼</div>
-<header>
-<div class="logo"><h1>ತೆಂಕಣ ತಿನಿಸು</h1><p>Thenkana Thinisu</p></div>
-<nav>
-<a href="#">Home</a><a href="#">Story</a><a href="#">Menu</a><a href="#">Gallery</a><a href="#">Contact</a>
-</nav>
-<a class="wa" href="https://wa.me/918660120686">Order on WhatsApp</a>
+<div class="toran" aria-hidden="true"></div>
+
+<header id="top">
+  <a class="logo" href="#top">
+    <h1>ತೆಂಕಣ ತಿನಿಸು</h1>
+    <p>Thenkana Thinisu</p>
+  </a>
+
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav id="site-nav">
+    <a href="#top">Home</a>
+    <a href="#story">Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <a class="wa" href="https://wa.me/919164644415?text=Hi!%20I'd%20like%20to%20order%20some%20snacks." target="_blank" rel="noopener">Order on WhatsApp</a>
+  </nav>
 </header>
 
-<section class="hero">
-<div>
-<h2>Authentic Homemade South Indian Snacks</h2>
-<p>Traditional flavours from the heart of Coastal Karnataka.</p>
-<a class="btn" href="https://wa.me/918660120686">Order Now</a>
-</div>
-<img src="images/snacks/hero.jpg" alt="Hero">
+<section class="hero" id="home">
+  <div class="hero-text">
+    <span class="eyebrow">🪔 Handmade with love · Coastal Karnataka</span>
+    <h2>Authentic Homemade South Indian Snacks</h2>
+    <p>Crisp, fresh and made in small batches using time-honoured family recipes. No preservatives — just traditional flavour, the way it&rsquo;s meant to be.</p>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/919164644415?text=Hi!%20I'd%20like%20to%20order%20some%20snacks." target="_blank" rel="noopener">Order Now</a>
+      <a class="btn btn-ghost" href="#menu">View Menu</a>
+    </div>
+  </div>
+  <img src="images/snacks/hero.jpg" alt="A spread of freshly made traditional South Indian snacks" loading="eager">
 </section>
 
-<section>
-<h2>Our Specialities</h2>
-<div class="grid">
-<div class="card"><img src="images/snacks/kajjaya.jpg"><h3>Kajjaya</h3></div>
-<div class="card"><img src="images/snacks/nippattu.jpg"><h3>Nippattu</h3></div>
-<div class="card"><img src="images/snacks/kodubale.jpg"><h3>Kodubale</h3></div>
-<div class="card"><img src="images/snacks/chakli.jpg"><h3>Chakli</h3></div>
-</div>
+<div class="kolam-divider" aria-hidden="true"></div>
+
+<section class="story" id="story">
+  <h2>Our Story</h2>
+  <p class="section-lead">
+    Thenkana Thinisu began in a home kitchen, with recipes handed down through generations.
+    Every kajjaya, every twist of kodubale and every crunchy nippattu is made by hand in small
+    batches &mdash; roasted, fried and packed fresh so the taste of Coastal Karnataka reaches
+    your home just as it did ours.
+  </p>
+  <div class="stats">
+    <div class="stat"><strong>100%</strong><span>Homemade</span></div>
+    <div class="stat"><strong>0</strong><span>Preservatives</span></div>
+    <div class="stat"><strong>Fresh</strong><span>Made to order</span></div>
+  </div>
+</section>
+
+<div class="yaksha-divider" aria-hidden="true"></div>
+
+<section class="menu" id="menu">
+  <h2>Our Specialities</h2>
+  <p class="section-lead">Tap any snack to order it on WhatsApp.</p>
+  <div class="grid">
+    <a class="card" href="https://wa.me/919164644415?text=I'd%20like%20to%20order%20Kajjaya." target="_blank" rel="noopener">
+      <img src="images/snacks/kajjaya.jpg" alt="Kajjaya — sweet fried rice-jaggery snack" loading="lazy">
+      <h3>Kajjaya</h3><p>Sweet · jaggery &amp; rice</p>
+    </a>
+    <a class="card" href="https://wa.me/919164644415?text=I'd%20like%20to%20order%20Nippattu." target="_blank" rel="noopener">
+      <img src="images/snacks/nippattu.jpg" alt="Nippattu — savoury crisp rice crackers" loading="lazy">
+      <h3>Nippattu</h3><p>Savoury · crispy</p>
+    </a>
+    <a class="card" href="https://wa.me/919164644415?text=I'd%20like%20to%20order%20Kodubale." target="_blank" rel="noopener">
+      <img src="images/snacks/kodubale.jpg" alt="Kodubale — ring-shaped spiced savoury snack" loading="lazy">
+      <h3>Kodubale</h3><p>Savoury · spiced rings</p>
+    </a>
+    <a class="card" href="https://wa.me/919164644415?text=I'd%20like%20to%20order%20Chakli." target="_blank" rel="noopener">
+      <img src="images/snacks/chakli.jpg" alt="Chakli — spiral-shaped crunchy snack" loading="lazy">
+      <h3>Chakli</h3><p>Savoury · crunchy spirals</p>
+    </a>
+  </div>
+</section>
+
+<div class="waves" aria-hidden="true"></div>
+
+<section class="gallery" id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/snacks/kajjaya.jpg" alt="Kajjaya" loading="lazy">
+    <img src="images/snacks/kodubale.jpg" alt="Kodubale" loading="lazy">
+    <img src="images/snacks/nippattu.jpg" alt="Nippattu" loading="lazy">
+    <img src="images/snacks/chakli.jpg" alt="Chakli" loading="lazy">
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Order &amp; Contact</h2>
+  <p class="section-lead">We deliver freshness to your doorstep. Reach out any time!</p>
+  <div class="contact-actions">
+    <a class="btn" href="https://wa.me/919164644415?text=Hi!%20I'd%20like%20to%20place%20an%20order." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+    <a class="btn btn-ghost" href="tel:+919164644415">📞 Call 9164644415</a>
+  </div>
 </section>
 
 <footer>
-<h2>ತೆಂಕಣ ತಿನಿಸು</h2>
-<p>📞 8660120686</p>
+  <p class="blessing">ಸ್ವಾಗತ · Swāgata &mdash; you are always welcome 🙏</p>
+  <h2>ತೆಂಕಣ ತಿನಿಸು</h2>
+  <p>Thenkana Thinisu · Authentic Homemade South Indian Snacks</p>
+  <p><a href="tel:+919164644415">📞 9164644415</a> &nbsp;·&nbsp; <a href="https://wa.me/919164644415" target="_blank" rel="noopener">WhatsApp</a></p>
+  <p class="copy">&copy; <span id="year">2026</span> Thenkana Thinisu. Made with ❤️ in Coastal Karnataka.</p>
 </footer>
+
+<a class="wa-float" href="https://wa.me/919164644415?text=Hi!%20I'd%20like%20to%20order%20some%20snacks." target="_blank" rel="noopener" aria-label="Order on WhatsApp">💬</a>
+
+<script src="js/script.js"></script>
 </body>
 </html>

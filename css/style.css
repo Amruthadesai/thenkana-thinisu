@@ -1,13 +1,128 @@
-body{margin:0;font-family:Poppins,sans-serif;background:#fff8ec;color:#4a2e1d}
-.garland{background:#7b1e24;color:#f4c542;text-align:center;padding:10px;font-size:24px}
-header{display:flex;justify-content:space-between;align-items:center;padding:16px 8%;background:#fff;position:sticky;top:0}
-.logo h1{margin:0;font-family:"Noto Serif Kannada",serif}
-nav a{margin:0 10px;text-decoration:none;color:#4a2e1d}
-.wa,.btn{background:#3e6a3a;color:#fff;padding:12px 18px;border-radius:30px;text-decoration:none}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:60px 8%;align-items:center}
-.hero img,.card img{width:100%;border-radius:16px;object-fit:cover}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px 8%}
-.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-section h2{text-align:center;font-family:"Noto Serif Kannada",serif}
-footer{background:#7b1e24;color:#fff;text-align:center;padding:30px;margin-top:40px}
-@media(max-width:768px){.hero{grid-template-columns:1fr}header{flex-direction:column;gap:12px}}
+:root{
+  --maroon:#7b1e24;
+  --gold:#f4c542;
+  --green:#3e6a3a;
+  --green-dark:#31532e;
+  --cream:#fff8ec;
+  --ink:#4a2e1d;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:Poppins,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+img{display:block}
+a{color:inherit}
+
+/* Mango-leaf & marigold toran (festoon) */
+.toran{height:58px;background:var(--maroon) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='58' viewBox='0 0 120 58'%3E%3Cline x1='0' y1='6' x2='120' y2='6' stroke='%23f4c542' stroke-width='2'/%3E%3Cline x1='30' y1='6' x2='30' y2='10' stroke='%23f4c542' stroke-width='2'/%3E%3Ccircle cx='30' cy='25' r='15' fill='%23e8871e'/%3E%3Ccircle cx='30' cy='25' r='9' fill='%23f4c542'/%3E%3Ccircle cx='30' cy='25' r='3' fill='%23b5561a'/%3E%3Cline x1='90' y1='6' x2='90' y2='11' stroke='%23f4c542' stroke-width='2'/%3E%3Cpath d='M90 11 C78 27 78 43 90 55 C102 43 102 27 90 11 Z' fill='%233e6a3a'/%3E%3Cpath d='M90 15 L90 52' stroke='%232c4d29' stroke-width='1'/%3E%3C/svg%3E") repeat-x top center;background-size:120px 58px}
+
+/* Ornamental kolam divider under section headings */
+section h2::after,footer h2::after{content:"";display:block;width:150px;height:16px;margin:12px auto 0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='16' viewBox='0 0 150 16'%3E%3Cline x1='4' y1='8' x2='58' y2='8' stroke='%23c99a2e' stroke-width='1.5'/%3E%3Cline x1='92' y1='8' x2='146' y2='8' stroke='%23c99a2e' stroke-width='1.5'/%3E%3Ccircle cx='62' cy='8' r='2.2' fill='%23c99a2e'/%3E%3Ccircle cx='88' cy='8' r='2.2' fill='%23c99a2e'/%3E%3Cpath d='M75 1 C67 8 67 8 75 15 C83 8 83 8 75 1 Z' fill='%237b1e24'/%3E%3Ccircle cx='75' cy='8' r='2' fill='%23f4c542'/%3E%3C/svg%3E") no-repeat center}
+footer h2::after{filter:brightness(1.6)}
+
+/* Temple-arch kolam divider band between sections */
+.kolam-divider{height:34px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='34' viewBox='0 0 60 34'%3E%3Cpath d='M0 30 Q30 -6 60 30' fill='none' stroke='%23c99a2e' stroke-width='1.4' opacity='0.7'/%3E%3Ccircle cx='30' cy='9' r='2.4' fill='%23e8871e'/%3E%3Ccircle cx='0' cy='30' r='2' fill='%237b1e24'/%3E%3Ccircle cx='60' cy='30' r='2' fill='%237b1e24'/%3E%3C/svg%3E") repeat-x center;background-size:60px 34px;opacity:.9}
+
+/* Header / nav */
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 8%;background:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.logo{text-decoration:none;color:var(--ink)}
+.logo h1{margin:0;font-family:"Noto Serif Kannada",serif;font-size:1.6rem;color:var(--maroon)}
+.logo p{margin:0;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--green)}
+nav{display:flex;align-items:center;gap:6px}
+nav a{margin:0 8px;text-decoration:none;color:var(--ink);font-weight:400;position:relative;transition:color .2s}
+nav a:not(.wa):hover{color:var(--maroon)}
+nav a:not(.wa)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--gold);transition:width .25s}
+nav a:not(.wa):hover::after{width:100%}
+
+/* Buttons */
+.wa,.btn{display:inline-block;background:var(--green);color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:600;transition:transform .15s,box-shadow .2s,background .2s;box-shadow:0 4px 14px rgba(62,106,58,.3)}
+.wa:hover,.btn:hover{background:var(--green-dark);transform:translateY(-2px);box-shadow:0 8px 20px rgba(62,106,58,.35)}
+.btn-ghost{background:transparent;color:var(--maroon);border:2px solid var(--maroon);box-shadow:none}
+.btn-ghost:hover{background:var(--maroon);color:#fff}
+
+/* Hamburger */
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.nav-toggle span{width:26px;height:3px;background:var(--maroon);border-radius:3px;transition:.3s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;padding:70px 8%;align-items:center}
+.eyebrow{display:inline-block;background:rgba(244,197,66,.25);color:var(--maroon);font-weight:600;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:14px}
+.hero-text h2{margin:0 0 14px;font-family:"Noto Serif Kannada",serif;font-size:2.6rem;line-height:1.15;color:var(--maroon)}
+.hero-text p{font-size:1.05rem;max-width:52ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.hero img{width:100%;border-radius:20px;object-fit:cover;aspect-ratio:4/3;box-shadow:0 18px 40px rgba(123,30,36,.2)}
+
+/* Section headings */
+section{padding:56px 8%}
+section h2{text-align:center;font-family:"Noto Serif Kannada",serif;font-size:2rem;color:var(--maroon);margin:0 0 10px}
+.section-lead{text-align:center;max-width:60ch;margin:0 auto 34px;color:#6b4c39}
+
+/* Pulli-kolam dot texture (faint) */
+.story,.contact{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='38' height='38' viewBox='0 0 38 38'%3E%3Ccircle cx='19' cy='19' r='1.5' fill='%237b1e24' opacity='0.14'/%3E%3C/svg%3E")}
+
+/* Story */
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin-top:34px}
+.stat{text-align:center}
+.stat strong{display:block;font-size:2rem;color:var(--green);font-family:"Noto Serif Kannada",serif}
+.stat span{font-size:.9rem;color:#6b4c39}
+
+/* Beach wave divider (ambient, like the toran / kolam) */
+.waves{height:40px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='40' viewBox='0 0 120 40'%3E%3Cpath d='M0 24 Q30 6 60 24 T120 24' fill='none' stroke='%233b7ea1' stroke-width='2.4' opacity='0.7'/%3E%3Cpath d='M0 33 Q30 17 60 33 T120 33' fill='none' stroke='%236fb7d4' stroke-width='2' opacity='0.55'/%3E%3C/svg%3E") repeat-x center;background-size:120px 40px}
+
+/* Yakshagana crown divider band (ambient, like the toran / kolam) */
+.yaksha-divider{height:44px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='44' viewBox='0 0 72 44'%3E%3Cpath d='M20 30 A16 16 0 0 1 52 30 Z' fill='%237b1e24' stroke='%23f4c542' stroke-width='1.4'/%3E%3Cg stroke='%23f4c542' stroke-width='1'%3E%3Cline x1='36' y1='30' x2='36' y2='12'/%3E%3Cline x1='36' y1='30' x2='26' y2='16'/%3E%3Cline x1='36' y1='30' x2='46' y2='16'/%3E%3Cline x1='36' y1='30' x2='20' y2='23'/%3E%3Cline x1='36' y1='30' x2='52' y2='23'/%3E%3C/g%3E%3Ccircle cx='36' cy='12' r='2' fill='%23e8871e'/%3E%3Ccircle cx='36' cy='33' r='5' fill='%23f4c542'/%3E%3Ccircle cx='19' cy='31' r='3' fill='%23e8871e'/%3E%3Ccircle cx='53' cy='31' r='3' fill='%23e8871e'/%3E%3C/svg%3E") repeat-x center;background-size:72px 44px}
+
+/* Menu grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.card{background:#fff;border-radius:18px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,.08);text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s;overflow:hidden;border-top:3px solid var(--gold)}
+.card:hover{border-top-color:var(--maroon)}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(123,30,36,.16)}
+.card img{width:100%;border-radius:12px;object-fit:cover;aspect-ratio:1/1;transition:transform .3s}
+.card:hover img{transform:scale(1.05)}
+.card h3{margin:14px 0 2px;text-align:center;color:var(--maroon)}
+.card p{margin:0;text-align:center;font-size:.85rem;color:#8a6a55}
+
+/* Gallery */
+.gallery{background:#fff}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.gallery-grid img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;transition:transform .3s,filter .3s;cursor:pointer}
+.gallery-grid img:hover{transform:scale(1.03);filter:brightness(1.05)}
+
+/* Contact */
+.contact{text-align:center}
+.contact-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:10px}
+
+/* Footer */
+footer{background:var(--maroon);color:#fff;text-align:center;padding:40px 8% 30px;margin-top:20px}
+footer .blessing{font-family:"Noto Serif Kannada",serif;color:var(--gold);font-size:1.05rem;margin:0 0 14px;letter-spacing:.5px}
+footer h2{font-family:"Noto Serif Kannada",serif;margin:0 0 6px}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .copy{font-size:.8rem;opacity:.8;margin-top:16px}
+
+/* Floating WhatsApp */
+.wa-float{position:fixed;right:20px;bottom:20px;width:56px;height:56px;background:var(--green);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 6px 18px rgba(62,106,58,.45);z-index:200;transition:transform .2s}
+.wa-float:hover{transform:scale(1.1)}
+
+/* Scroll-reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:860px){
+  .nav-toggle{display:flex}
+  nav{position:fixed;inset:0 0 0 auto;top:0;height:100vh;width:min(75vw,300px);background:#fff;flex-direction:column;align-items:flex-start;justify-content:center;gap:22px;padding:40px;transform:translateX(100%);transition:transform .3s;box-shadow:-6px 0 24px rgba(0,0,0,.15)}
+  nav.open{transform:translateX(0)}
+  nav a{font-size:1.15rem;margin:0}
+  .hero{grid-template-columns:1fr;padding:48px 8%}
+  .hero-text h2{font-size:2rem}
+  .hero img{order:-1}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{transition:none!important}
+}
