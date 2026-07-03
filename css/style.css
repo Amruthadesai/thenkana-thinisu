@@ -1,0 +1,13 @@
+body{margin:0;font-family:Poppins,sans-serif;background:#fff8ec;color:#4a2e1d}
+.garland{background:#7b1e24;color:#f4c542;text-align:center;padding:10px;font-size:24px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 8%;background:#fff;position:sticky;top:0}
+.logo h1{margin:0;font-family:"Noto Serif Kannada",serif}
+nav a{margin:0 10px;text-decoration:none;color:#4a2e1d}
+.wa,.btn{background:#3e6a3a;color:#fff;padding:12px 18px;border-radius:30px;text-decoration:none}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:60px 8%;align-items:center}
+.hero img,.card img{width:100%;border-radius:16px;object-fit:cover}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px 8%}
+.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+section h2{text-align:center;font-family:"Noto Serif Kannada",serif}
+footer{background:#7b1e24;color:#fff;text-align:center;padding:30px;margin-top:40px}
+@media(max-width:768px){.hero{grid-template-columns:1fr}header{flex-direction:column;gap:12px}}
